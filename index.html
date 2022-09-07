@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    
+
+<div class="banner-container" id="n2">
+    <div class="banner">
+        <div class="shoe">
+            <img  src="shoes.png" alt="">
+        </div>
+        <div class="content">
+            <span>WOW!</span>
+            <h3>50% off</h3>
+            <p>offer ends after 5 days</p>
+            <a href="#" class="btn">veiw offer</a>
+        </div>
+        <div class="women">
+            <img  src="women.png" alt="">
+        </div>
+    </div>
+   
+
+</div>
+<div class="banner-container" id="n1">
+    <div class="banner1">
+        <div class="women">
+            <img src="women1.png" alt="">
+        </div>
+      
+        <div class="content">
+            <span>WOW!</span>
+            <h3>50% off</h3>
+            <p>offer ends after 5 days</p>
+            <a href="#" class="btn">veiw offer</a>
+        </div>
+        <div class="shoe">
+            <img src="shoe.png" alt="">
+        </div>
+    </div>
+</div>
+
+<div class="banner-container" id="n3">
+    <div class="banner2">
+        <div class="women1">
+            <img src="women1.png" alt="">
+        </div>
+      
+        <div class="content1">
+            <span>WOW!</span>
+            <h3>50% off</h3>
+            <p>offer ends after 5 days</p>
+            <a href="#" class="btn">veiw offer</a>
+        </div>
+        <div class="shoe1">
+            <img src="shoe.png" alt="">
+        </div>
+    </div>
+</div>
+
+</body>
+<script type="text/javascript">
+window.onload = function() {
+  var elem1 = document.getElementById('n1').style.display = 'block';
+  var elem2 = document.getElementById('n2').style.display = 'none';
+  var elem3 = document.getElementById('n3').style.display = 'none';
+  setInterval(NextBaner, 10000);
+  };
+  function makeCounter() {
+  var currentCount = 2;
+  
+  return function() {
+  return currentCount++;
+  };
+  }
+  
+  var counter = makeCounter();
+  function NextBaner(){
+  var s =counter();
+  var elem1 = document.getElementById('n1');
+  var elem2 = document.getElementById('n2');
+  var elem3 = document.getElementById('n3');
+  if(s%3==1){
+  elem1.style.display = 'block';
+  elem2.style.display = 'none';
+  elem3.style.display = 'none';
+  }
+  else if(s%3==2){
+  elem1.style.display = 'none';
+  elem2.style.display = 'block';
+  elem3.style.display = 'none';
+  }
+  else{
+  elem1.style.display = 'none';
+  elem2.style.display = 'none';
+  elem3.style.display = 'block';
+  }
+  }
+</script>
+	
+</html>
